@@ -1,0 +1,4 @@
+1. When the page loads map over question.choices and add them to the usetState(choices) array.
+2. If the question.choices.responses is updated, load the new response value 
+
+Look up why it's refetching

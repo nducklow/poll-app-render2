@@ -1,0 +1,67 @@
+FINAL PROJECT
+ 
+ (Backend: Week 21 Exercise 5. Backend+Frontent Week 21 Exercise 19)
+
+Backend + Frontend => /mern-app
+1. create our package.json 
+    - install concurrently
+    - add scripts 
+2. create .gitignore, add node_modules
+------
+Backend
+1. create server folder
+2. add inside the server folder the following:
+    config
+    models
+    schemas
+    seeds
+2b. Create a .gitignore and add node_modules, .env
+2c. Add Readme.md with title of app
+3. Create package.json
+    npm init -y
+    npm i
+        mongoose 
+        @apollo/server
+        express
+        nodemon --save-dev
+        (graphql????)
+        add scripts to run app in dev mode
+4. Create server.js
+5. Create database
+    add connection.js file in config/
+5b. push to GitHub
+    in terminal: git init
+    in browser: create new repo without a readme, follow GitHub instructionsd
+6.Create models
+    add Question model
+        name
+        total vote count
+        Array of choices
+
+    add Choice model (nested inside question model)
+        name
+        vote count (clicked/chosen)
+        
+7. Create schema: typeDefs & resolvers
+    query: Questions filter out questions the use has already answered
+8. Add seed data
+    create cleanDB.js file to empty the database
+    create items.json file
+    seed.js - executes the seeding process
+    add to scripts section of package.json, seed script
+9. Test items endpoint in apollo sandbox
+-----
+
+Frontend => /client
+1. create client folder using vite create command inside the mern-app folder
+2. Install dependencies - @apollo/client
+3. Set up what is needed to consume the backend
+    a. add proxy to vite.config.js
+    b. Wrap main component in ApolloProvider
+    c. Create utils folder and add queries.js
+    d. Create landing page, consume the backend data (ex. 11, Home)
+4. Use ant design components for each item ()
+
+
+5. crate variables (last question index, pick a number 0-last index @random/ advancing arrows in react)
+

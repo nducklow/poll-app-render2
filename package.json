@@ -1,0 +1,17 @@
+{
+  "name": "poll-app",
+  "version": "1.0.0",
+  "description": "This template provides a minimal setup to get React  Vite with HMR and some ESLint rules.\r Currently, two official plugins are available:\r - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh\r - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh\r React Polling Application\r This is a React-based polling application that displays questions and allows users to vote on their choices. It uses Apollo Client for data fetching and local storage to track the number of clicks on each choice.\r Table of Contents\r Features\r Installation\r Usage\r Components\r Contributing\r License\r Features\r Display a list of questions fetched from a GraphQL API.\r Track user clicks on each choice and persist them using local storage.\r Navigate through questions and see updated click counts.\r Installation\r 1- Clone the repository: github link here\r 2- Install dependencies: npm install\r Usage\r 1- Start the development server: npm run dev\r 2- Open your browser and navigate to http://localhost:3000 to use the application.\r Components\r Welcome\r The Welcome component serves as the main interface for users to interact with the polling application.\r Imports: Uses Apollo Client for fetching questions and React hooks for state management.\r State:\r currentQuestionIndex: Tracks the current question being displayed.\r clickCounts: Keeps track of how many times each choice has been clicked.\r Effects:\r Loads clickCounts from local storage on component mount.\r Saves clickCounts to local storage whenever it updates.\r Handlers:\r handleChoiceClick: Updates the click counts when a choice is clicked.\r handleNextClick: Moves to the next question when the button is clicked.\r QuestionDisplay\r The QuestionDisplay component displays a single question and its choices. It allows users to click on choices and shows the number of responses for each choice.\r Props:\r question: The question object containing the question text and choices.\r onChoiceClick: A callback function to handle choice clicks.\r State:\r clickedChoices: Keeps track of which choices have been clicked.\r Effects:\r Resets clickedChoices whenever a new question is displayed.\r Handlers:\r handleChoiceClick: Updates the clicked choices state and invokes onChoiceClick with the choice name.\r Contributing\r Fork the repository.\r Create a feature branch (git checkout -b feature-branch).\r Commit your changes (git commit -am 'Add new feature').\r Push to the branch (git push origin feature-branch).\r Open a Pull Request.\r License\r This project is licensed under the MIT License - see the LICENSE file for details.",
+  "main": "index.js",
+  "scripts": {
+    "seed": "node server/seeds/seed.js",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "render-build":"npm run install && npm run build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
